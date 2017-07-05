@@ -10,26 +10,29 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { SigninPage } from '../pages/signin/signin';
+import { SigninWithEmailPage } from '../pages/signinwithemail/signinwithemail';
 import { SignupPage } from '../pages/signup/signup';
 import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
 
 import { AuthService } from '../providers/auth/auth-service';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyDIqbcVM2JcJVz7wgluSsObUFRbQ8XXIN4",
-  authDomain: "ionic-example-becdd.firebaseapp.com",
-  databaseURL: "https://ionic-example-becdd.firebaseio.com",
-  projectId: "ionic-example-becdd",
-  storageBucket: "ionic-example-becdd.appspot.com",
-  messagingSenderId: "252162111804"
-};
+import { GooglePlus } from '@ionic-native/google-plus';
 
+const firebaseConfig = {
+  apiKey: "AIzaSyCKSwciRo4NkHJtHiKWzsyluYxwp_9q1CA",
+  authDomain: "ionic-example-96de5.firebaseapp.com",
+  databaseURL: "https://ionic-example-96de5.firebaseio.com",
+  projectId: "ionic-example-96de5",
+  storageBucket: "",
+  messagingSenderId: "638933829742"
+};
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
     SigninPage,
+    SigninWithEmailPage,
     SignupPage,
     ResetpasswordPage
   ],
@@ -44,6 +47,7 @@ const firebaseConfig = {
     MyApp,
     HomePage,
     SigninPage,
+    SigninWithEmailPage,
     SignupPage,
     ResetpasswordPage
   ],
@@ -51,7 +55,8 @@ const firebaseConfig = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthService
+    AuthService,
+    GooglePlus
   ]
 })
 export class AppModule {}

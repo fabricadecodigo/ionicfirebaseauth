@@ -7,7 +7,17 @@
 </ion-header>
 
 <ion-content padding>
-  <p>Esse app é um exemplo de login com Ionic e Firebase</p>
+  <ion-card>
+    <img src="{{ imgUrl }}" alt="{{ displayName }}" />
+    <ion-card-content>
+      <ion-card-title>
+        Bem vindo {{ displayName }}
+      </ion-card-title>
+      <p>
+        Esse app é um exemplo de login com Ionic e Firebase
+      </p>
+    </ion-card-content>
+  </ion-card>
 
   <button ion-button block color="primary" (click)="signOut()">
     Sair
