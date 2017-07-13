@@ -33,8 +33,6 @@ export class AuthService {
   }
 
   signInWithFacebook() {
-    this.facebook.api('', []);
-
     return this.facebook.login(['public_profile', 'email'])
       .then((res: FacebookLoginResponse) => {
         //https://developers.facebook.com/docs/graph-api/reference/user
