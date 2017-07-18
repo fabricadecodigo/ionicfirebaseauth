@@ -18,6 +18,7 @@ import { AuthService } from '../providers/auth/auth-service';
 
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Facebook } from '@ionic-native/facebook';
+import { TwitterConnect } from '@ionic-native/twitter-connect';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCKSwciRo4NkHJtHiKWzsyluYxwp_9q1CA",
@@ -58,7 +59,8 @@ const firebaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
     GooglePlus,
-    Facebook
+    Facebook,
+    TwitterConnect
   ]
 })
 export class AppModule {}

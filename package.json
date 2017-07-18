@@ -25,6 +25,7 @@
         "@ionic-native/google-plus": "^3.12.1",
         "@ionic-native/splash-screen": "3.10.2",
         "@ionic-native/status-bar": "3.10.2",
+        "@ionic-native/twitter-connect": "^4.0.0",
         "@ionic/storage": "2.0.1",
         "angularfire2": "^4.0.0-rc.1",
         "cordova-android": "^6.2.3",
@@ -42,6 +43,7 @@
         "promise-polyfill": "^6.0.2",
         "rxjs": "5.4.0",
         "sw-toolbox": "3.6.0",
+        "twitter-connect-plugin": "^0.6.0",
         "zone.js": "0.8.12"
     },
     "devDependencies": {
@@ -65,6 +67,9 @@
             "cordova-plugin-facebook4": {
                 "APP_ID": "1919669594969945",
                 "APP_NAME": "Ionic Example"
+            },
+            "twitter-connect-plugin": {
+                "FABRIC_KEY": "71bea6e967f1751e3053110d26cc84311e9647b0"
             }
         },
         "platforms": [

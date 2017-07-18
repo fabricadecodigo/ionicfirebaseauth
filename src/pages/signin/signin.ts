@@ -36,7 +36,6 @@ export class SigninPage {
         this.navCtrl.setRoot(HomePage);
       })
       .catch((error) => {
-        console.error(error);
         this.toastCtrl.create({ duration: 3000, position: 'bottom', message: 'Erro ao efetuar o login' })
           .present();
       });
@@ -48,7 +47,17 @@ export class SigninPage {
         this.navCtrl.setRoot(HomePage);
       })
       .catch((error) => {
-        console.error(error);
+        this.toastCtrl.create({ duration: 3000, position: 'bottom', message: 'Erro ao efetuar o login' })
+          .present();
+      });
+  }
+
+  signInWithTwitter() {
+    this.authService.signInWithTwitter()
+      .then(() => {
+        this.navCtrl.setRoot(HomePage);
+      })
+      .catch((error) => {
         this.toastCtrl.create({ duration: 3000, position: 'bottom', message: 'Erro ao efetuar o login' })
           .present();
       });
