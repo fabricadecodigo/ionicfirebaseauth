@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Contatos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of items | async">
+      <ion-item>{{ item.name }}</ion-item>
+      <ion-item-options side="left">
+        <button ion-button icon-only color="primary" (click)="editItem(item)"><ion-icon name="create"></ion-icon></button>
+        <button ion-button icon-only color="danger" (click)="removeItem(item)"><ion-icon name="trash"></ion-icon></button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab bottom right>
+    <button ion-fab color="secondary" (click)="newContact()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+
+</ion-content>

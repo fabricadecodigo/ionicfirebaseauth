@@ -49,7 +49,7 @@ export class AuthService {
       });
   }
 
-  signOut() {
+  signOut() : firebase.Promise<any> {
     if (this.angularFireAuth.auth.currentUser.providerData.length) {
       for (var i = 0; i < this.angularFireAuth.auth.currentUser.providerData.length; i++) {
         var provider = this.angularFireAuth.auth.currentUser.providerData[i];

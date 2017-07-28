@@ -6,6 +6,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -13,8 +14,10 @@ import { SigninPage } from '../pages/signin/signin';
 import { SigninWithEmailPage } from '../pages/signinwithemail/signinwithemail';
 import { SignupPage } from '../pages/signup/signup';
 import { ResetpasswordPage } from '../pages/resetpassword/resetpassword';
+import { EditContatosPage } from '../pages/edit-contatos/edit-contatos';
 
 import { AuthService } from '../providers/auth/auth-service';
+import { ContactService } from '../providers/contact-service/contact-service';
 
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Facebook } from '@ionic-native/facebook';
@@ -36,13 +39,15 @@ const firebaseConfig = {
     SigninPage,
     SigninWithEmailPage,
     SignupPage,
-    ResetpasswordPage
+    ResetpasswordPage,
+    EditContatosPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireDatabaseModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -51,16 +56,18 @@ const firebaseConfig = {
     SigninPage,
     SigninWithEmailPage,
     SignupPage,
-    ResetpasswordPage
+    ResetpasswordPage,
+    EditContatosPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthService,
+    ContactService,
     GooglePlus,
     Facebook,
-    TwitterConnect
+    TwitterConnect,
   ]
 })
 export class AppModule {}
