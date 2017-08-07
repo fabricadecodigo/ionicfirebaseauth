@@ -14,13 +14,11 @@ export class MyApp {
   rootPage: any;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, afAuth: AngularFireAuth) {
-    const authObserver = afAuth.authState.subscribe(user => {
+    afAuth.authState.subscribe(user => {
       if (user) {
         this.rootPage = HomePage;
-        authObserver.unsubscribe();
       } else {
         this.rootPage = SigninPage;
-        authObserver.unsubscribe();
       }
     });
 

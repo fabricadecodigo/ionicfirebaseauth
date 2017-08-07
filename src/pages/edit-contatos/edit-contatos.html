@@ -17,6 +17,11 @@
         <ion-input type="text" required [(ngModel)]="contactName" name="contactName"></ion-input>
       </ion-item>
 
+      <ion-item>
+        <img src="{{ imgPath }}" alt="" />
+        <button ion-button block color="dark" (click)="escolherFoto()">Escolher foto</button>
+      </ion-item>
+
     </ion-list>
 
     <div padding>

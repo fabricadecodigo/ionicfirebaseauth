@@ -22,13 +22,14 @@ import { ContactService } from '../providers/contact-service/contact-service';
 import { GooglePlus } from '@ionic-native/google-plus';
 import { Facebook } from '@ionic-native/facebook';
 import { TwitterConnect } from '@ionic-native/twitter-connect';
+import { ImagePicker } from '@ionic-native/image-picker';
 
 const firebaseConfig = {
   apiKey: "AIzaSyCKSwciRo4NkHJtHiKWzsyluYxwp_9q1CA",
   authDomain: "ionic-example-96de5.firebaseapp.com",
   databaseURL: "https://ionic-example-96de5.firebaseio.com",
   projectId: "ionic-example-96de5",
-  storageBucket: "",
+  storageBucket: "ionic-example-96de5.appspot.com",
   messagingSenderId: "638933829742"
 };
 
@@ -68,6 +69,7 @@ const firebaseConfig = {
     GooglePlus,
     Facebook,
     TwitterConnect,
+    ImagePicker
   ]
 })
 export class AppModule {}

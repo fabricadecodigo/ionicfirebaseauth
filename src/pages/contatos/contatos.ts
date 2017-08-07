@@ -25,7 +25,7 @@ export class ContatosPage {
   }
 
   removeItem(item: any) {
-    this.contactService.remove(item.$key);
+    this.contactService.remove(item);
   }
 
 }

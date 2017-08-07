@@ -11,7 +11,12 @@
 
   <ion-list>
     <ion-item-sliding *ngFor="let item of items | async">
-      <ion-item>{{ item.name }}</ion-item>
+      <ion-item>
+        <ion-avatar item-start>
+          <img src="{{ item.url }}" />
+        </ion-avatar>
+        {{ item.name }}
+      </ion-item>
       <ion-item-options side="left">
         <button ion-button icon-only color="primary" (click)="editItem(item)"><ion-icon name="create"></ion-icon></button>
         <button ion-button icon-only color="danger" (click)="removeItem(item)"><ion-icon name="trash"></ion-icon></button>
